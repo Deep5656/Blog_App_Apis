@@ -62,6 +62,9 @@ public class UserSeriveImpl implements UserService {
 		this.userRepo.delete(user);
 	}
 	
+	
+//	ModelMapper used here for converting user to userDto and vice-versa.
+	
 	public User dtoToUser(UserDto userDto) {
 		User user = this.modelMapper.map(userDto, User.class);
 		return user;
